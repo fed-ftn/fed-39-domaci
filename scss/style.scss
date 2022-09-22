@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif;
+  color: $font_color;
 }
 
 html{
@@ -15,12 +16,15 @@ html{
 
 header {
  background-color: $footer_background;
- height: 100vh;
+ height: 90vh;
  background-image: url("../slike/intro.jpg");
  background-position: center;
  background-size: cover;
  background-repeat: no-repeat;
-
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ padding-bottom: 10rem;
  .navMain {
   background-color: $footer_background;
   display: flex;
@@ -34,6 +38,7 @@ header {
     padding: 1rem;
     a {
       border-bottom: 1px solid #fff;
+
     }
   }
   }
@@ -57,6 +62,12 @@ header {
     }
     li {
       margin-right: 1rem;
+      transition: box-shadow 200ms ease-in;
+
+      &:hover {
+        
+        box-shadow: inset 0 -1px 0 0 #fff
+      }
     }
     a {
       text-decoration: none;
@@ -65,5 +76,190 @@ header {
       display: block;
       font-size: 1.2rem;
     }
+
+    .welcome_message {
+
+      width: 60%;
+      padding-top: 1rem;
+      margin: 0 auto;
+      background-color: hsla(0, 0%, 20%, 0.568);
+     
+      h1 {
+        font-size: 4.4rem;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 2px;
+        padding-bottom: 1rem;
+      }
+  
+      p {
+        color: #fff;
+        text-align: center;
+        font-size: 1.4rem
+      };
+    }
+
   }
- 
+
+.filter_btns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 25rem;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(201, 200, 200);
+    border-radius: 333px;
+    align-self: center;
+    transition: background 300ms ease-in, color 300ms ease-in;
+    a {
+      text-decoration: none;
+    }
+
+    &:hover {
+      background-color: $btn_color_hover;
+      color: #fff;
+      cursor: pointer;
+    }
+    &:hover a {
+      color: #fff;
+    }
+  }
+}
+
+.section_offers {
+  padding: 3rem 20rem;
+  display: grid;
+  grid-template-columns: repeat(4, 20rem);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+  background-color: $section_background;
+
+
+  @for $i from 1 through 6 {
+    .offers#{$i} {
+      background-image: url(../slike/#{$i}.jpg);
+      background-position: center;
+      background-size: cover;
+      height: 25rem;
+      width: 20rem;
+      transition: height 200ms ease-in, width 200ms ease-in;
+      
+      &:hover div {
+        display: block;
+        width: 100%;
+        height: 40%;
+      }
+      div {
+        padding: 1rem;
+        font-size: 1.6rem;
+        background-color: rgba(255, 255, 255, 0.541);
+        display: none;
+  
+        p {
+          color: #333;
+        }
+      }  
+    }
+  }
+
+  .offers {
+    div {
+      height: 40%;
+      
+      font-size: 1rem;
+
+      p {
+        color: #333;
+      }
+    }
+  }
+}
+
+
+
+
+figure {
+  width: 80%;
+  position: relative;
+  img {width:80%;}
+}
+
+figcaption {
+  position: absolute;
+  font-size: 2.4rem;
+  background-color: transparent;
+  padding:2rem 3rem 5rem 2rem;
+  width: 80%;
+  height: 40%;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.589);
+}
+
+.section_pricing {
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    color: $heading-color;
+  }
+
+  padding: 4rem 0 6rem 0;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 3rem;
+
+  table {
+    border-collapse: collapse;
+    
+    text-align: center;
+    border: 1px #444 solid;
+  }
+  
+  .table_container {
+    display: flex;
+    width: 50%;
+    td {
+      padding: 1rem;
+    }
+  }
+  
+  .location, .pricing {
+    width: 70%;
+    height: 10rem;
+  }
+  
+  .location {
+    align-self: self-end;
+    td[rowspan="3"] {
+      background-color: red;
+      color: #fff;
+    }
+    td {
+      background-color: $header_background;
+      color: #fff;
+    }
+  }
+
+  .pricing {
+    td[colspan="3"] {
+      background-color: red;
+      color:#fff;
+    }
+
+
+  }
+  .rent-buy, .sell {
+    background-color: $header_background;
+    color: #fff;
+  }
+}
+
