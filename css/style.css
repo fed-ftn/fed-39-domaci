@@ -1,0 +1,61 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+header {
+  background-color: #374249;
+  height: 100vh;
+  background-image: url("../slike/intro.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header .navMain {
+  background-color: #374249;
+  display: flex;
+  gap: 3rem;
+}
+header .navMain .location {
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  background-color: #f75311;
+  padding: 1rem;
+}
+header .navMain .location a {
+  border-bottom: 1px solid #fff;
+}
+header img {
+  width: 25px;
+}
+header ul {
+  display: flex;
+  list-style: none;
+  gap: 5rem;
+  align-items: center;
+}
+header ul li div {
+  display: flex;
+  align-items: center;
+  width: 20vw;
+  background-color: #f75311;
+}
+header li {
+  margin-right: 1rem;
+}
+header a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+}
+
+/*# sourceMappingURL=style.css.map */
