@@ -24,6 +24,7 @@
 }
 .navbar .links p:hover {
   text-decoration: underline;
+  cursor: pointer;
 }
 .navbar .links .location {
   width: 30%;
@@ -93,6 +94,7 @@
 .filter .buttons div:hover {
   background-color: gray;
   color: white;
+  cursor: pointer;
 }
 
 .smallimgs {
@@ -112,6 +114,9 @@
 }
 .smallimgs .wrapper .slika {
   position: relative;
+}
+.smallimgs .wrapper .slika:hover {
+  cursor: pointer;
 }
 .smallimgs .wrapper .slika:hover .cena {
   font-weight: bold;
