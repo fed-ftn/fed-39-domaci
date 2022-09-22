@@ -4,6 +4,7 @@
 header {
     top: 0;
     width: 100%;
+    color: $bela;
 
     img {
         margin: 1%;
@@ -11,6 +12,117 @@ header {
 }
 
 .up {
-    @include flex;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: $siva;
+
+    .upright {
+        width: 25%;
+
+        a {
+            color: $bela;
+            text-decoration: none;
+            margin: 6%;
+        }
+    }
+}
+
+.orangediv {
+    background: $narandzasta;
+    width: 15%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+        color: $bela;
+    }
+
+    img {
+        width: 23%;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Roboto;
+}
+
+#hero {
+    width: 100%;
+}
+
+#transparentdiv {
+    background: $prozirna ;
+    position: absolute;
+    left: 28%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 70%;
+    color: $bela;
+    width: 51%;
+
+    h1 {
+        font-size: -webkit-xxx-large;
+        margin: 0;
+        font-weight: normal;
+    }
+}
+
+#prvasekcija {
+    input {
+        border-radius: 30px;
+        border: 1px solid $siva;
+        color: $siva;
+        margin: 2%;
+        font-size: 23px;
+        padding: 17px;
+        background: $transparent;
+    }
+
+    background: $bela;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+}
+
+#drugasekcija,
+#cetvrtasekcija {
+    background: $svetloplava;
+}
+
+#drugim {
+    margin: 1% 15%;
+    display: flex;
+    flex-wrap: wrap;
+
+    img {
+        width: 23%;
+        margin: 1% 1%;
+    }
+}
+
+footer {
+    width: 100%;
+    bottom: 0;
+
+    color: $bela;
+    text-align: center;
+
+    background: $siva;
+
+    p {
+        margin: 0;
+        padding: 1%;
+    }
+
+    a {
+        color: $narandzasta;
+        text-decoration: none;
+    }
 }
