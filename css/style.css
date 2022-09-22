@@ -97,8 +97,226 @@ main .gallery_box {
   margin: 3rem 0;
 }
 main .gallery_box img {
-  width: 20%;
-  height: 40%;
+  width: 22%;
+}
+main .tabela {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .tabela h1 {
+  text-transform: uppercase;
+  color: #374249;
+  margin: 2rem;
+}
+main .tabela p {
+  margin-bottom: 2rem;
+}
+main .tabela .price {
+  margin-left: 30rem;
+}
+main .tabela .price_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f75311;
+  color: white;
+  width: 22.5rem;
+  height: 2.66rem;
+  border: 1px solid gray;
+}
+main .tabela .price div {
+  display: flex;
+  color: white;
+}
+main .tabela .price div .price_rent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 2.66rem;
+  background-color: rgb(55, 66, 73);
+  border: 1px solid gray;
+}
+main .tabela .price div .price_sell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5rem;
+  background-color: rgb(55, 66, 73);
+  border: 1px solid gray;
+}
+main .tabela .box {
+  display: flex;
+  margin-bottom: 8rem;
+}
+main .tabela .box_loc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 8rem;
+  color: white;
+  border: 1px solid gray;
+  background-color: #f75311;
+}
+main .tabela .box_2 {
+  width: 15rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(55, 66, 73);
+  color: white;
+}
+main .tabela .box_2-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_2-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_2-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_3 {
+  width: 15rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: gray;
+}
+main .tabela .box_3-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_3-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_3-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_4 {
+  width: 7.5rem;
+  height: 8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  color: gray;
+}
+main .tabela .box_4-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_4-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .tabela .box_4-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+main .contact {
+  background-color: #f3f7f9;
+  text-align: center;
+}
+main .contact h1 {
+  color: #374249;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+main .contact_box {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  padding-bottom: 2rem;
+}
+main .contact_box form {
+  background-color: #f75311;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 15rem;
+  gap: 20px;
+}
+main .contact_box form div {
+  width: 100%;
+}
+main .contact_box form div input,
+main .contact_box form div select {
+  border: none;
+  width: 95%;
+  height: 30px;
+}
+main .contact_box form .first {
+  margin-top: 20px;
+  gap: 25px;
+  width: 95%;
+  display: flex;
+}
+main .contact_box form .first select {
+  width: 30%;
+}
+main .contact_box form .message {
+  height: 50%;
+}
+main .contact_box form .message input {
+  height: 80%;
+}
+
+footer {
+  background-color: rgb(55, 66, 73);
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  color: white;
+}
+footer span {
+  color: #f75311;
 }
 
 /*# sourceMappingURL=style.css.map */

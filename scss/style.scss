@@ -86,14 +86,13 @@ main {
     padding: 1rem;
     padding-right: 10rem;
 
-        button{
-            border-radius: 20px;
-            padding: 10px;
-            margin: 1rem 1rem;
-            color: $heading-color;
-            background-color: white;
-            border: 0.5px solid $grey-light-1;
-
+    button {
+      border-radius: 20px;
+      padding: 10px;
+      margin: 1rem 1rem;
+      color: $heading-color;
+      background-color: white;
+      border: 0.5px solid $grey-light-1;
     }
   }
 
@@ -103,17 +102,263 @@ main {
     justify-content: center;
     align-items: center;
 
-        &_box {
-            width: 60%;
-            gap: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            margin: 3rem 0;
+    &_box {
+      width: 60%;
+      gap: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 3rem 0;
 
-            img {
-                width: 20%;
-                height: 40%;
-            }
+      img {
+        width: 22%;
+      }
+    }
+  }
+
+  .tabela {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      text-transform: uppercase;
+      color: $heading-color;
+      margin: 2rem;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+    .price {
+      margin-left: 30rem;
+      &_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $orange-color;
+        color: white;
+        width: 22.5rem;
+        height: 2.66rem;
+        border: 1px solid gray;
+      }
+      div {
+        display: flex;
+
+        color: white;
+
+        .price_rent {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 15rem;
+          height: 2.66rem;
+          background-color: $blue-dark;
+          border: 1px solid gray;
         }
+
+        .price_sell {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 7.5rem;
+          background-color: $blue-dark;
+          border: 1px solid gray;
+        }
+      }
+    }
+
+    .box {
+      display: flex;
+      margin-bottom: 8rem;
+
+      &_loc {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15rem;
+        height: 8rem;
+        color: white;
+        border: 1px solid gray;
+        background-color: $orange-color;
+      }
+
+      &_2 {
+        width: 15rem;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $blue-dark;
+        color: white;
+
+        &-1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-3 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+      }
+
+      &_3 {
+        width: 15rem;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        color: gray;
+
+        &-1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-3 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+      }
+
+      &_4 {
+        width: 7.5rem;
+        height: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        color: gray;
+
+        &-1 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-2 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+
+        &-3 {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 33.3%;
+          width: 100%;
+          border: 1px solid gray;
+        }
+      }
+    }
+  }
+
+  .contact {
+    background-color: $grey-light-bcg;
+    text-align: center;
+
+    h1 {
+      color: $heading-color;
+      text-transform: uppercase;
+      padding: 2rem 0;
+    }
+
+    &_box {
+      display: flex;
+      justify-content: center;
+      gap: 100px;
+      padding-bottom: 2rem;
+      form {
+        background-color: $orange-color;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        height: 15rem;
+        gap: 20px;
+
+        div {
+          width: 100%;
+
+          input,
+          select {
+            border: none;
+            width: 95%;
+            height: 30px;
+          }
+        }
+
+        .first {
+          margin-top: 20px;
+          gap: 25px;
+          width: 95%;
+          display: flex;
+
+          select {
+            width: 30%;
+          }
+        }
+
+        .message {
+          height: 50%;
+          input {
+            height: 80%;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: $blue-dark;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  color: white;
+
+  span {
+    color: $orange-color;
   }
 }
