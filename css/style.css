@@ -2,7 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Roboto";
   color: #797979;
 }
 
@@ -10,8 +10,13 @@ html {
   font-size: 62.5%;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: #374249;
+}
+
 header {
-  background-color: #374249;
   height: 90vh;
   background-image: url("../slike/intro.jpg");
   background-position: center;
@@ -19,10 +24,12 @@ header {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: space-between;
   padding-bottom: 10rem;
 }
 header .navMain {
+  width: 100vw;
   background-color: #374249;
   display: flex;
   gap: 3rem;
@@ -69,7 +76,6 @@ header a {
 header .welcome_message {
   width: 60%;
   padding-top: 1rem;
-  margin: 0 auto;
   background-color: hsla(0deg, 0%, 20%, 0.568);
 }
 header .welcome_message h1 {
@@ -78,11 +84,13 @@ header .welcome_message h1 {
   text-align: center;
   letter-spacing: 2px;
   padding-bottom: 1rem;
+  font-weight: 100;
 }
 header .welcome_message p {
   color: #fff;
   text-align: center;
   font-size: 1.4rem;
+  font-weight: 100;
 }
 
 .filter_btns {
@@ -92,7 +100,7 @@ header .welcome_message p {
   gap: 3rem;
   padding: 2rem 25rem;
 }
-.filter_btns div {
+.filter_btns .btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -102,15 +110,15 @@ header .welcome_message p {
   align-self: center;
   transition: background 300ms ease-in, color 300ms ease-in;
 }
-.filter_btns div a {
+.filter_btns .btn a {
   text-decoration: none;
 }
-.filter_btns div:hover {
+.filter_btns .btn:hover {
   background-color: #cfd1d3;
   color: #fff;
   cursor: pointer;
 }
-.filter_btns div:hover a {
+.filter_btns .btn:hover a {
   color: #fff;
 }
 
@@ -264,25 +272,6 @@ header .welcome_message p {
   color: #333;
 }
 
-figure {
-  width: 80%;
-  position: relative;
-}
-figure img {
-  width: 80%;
-}
-
-figcaption {
-  position: absolute;
-  font-size: 2.4rem;
-  background-color: transparent;
-  padding: 2rem 3rem 5rem 2rem;
-  width: 80%;
-  height: 40%;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.589);
-}
-
 .section_pricing {
   padding: 4rem 0 6rem 0;
   display: flex;
@@ -290,10 +279,30 @@ figcaption {
   align-items: center;
   gap: 3rem;
 }
-.section_pricing h2 {
-  text-transform: uppercase;
-  font-size: 2.2rem;
-  color: #374249;
+.section_pricing .btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  border: 1px solid rgb(201, 200, 200);
+  border-radius: 333px;
+  align-self: center;
+  transition: background 300ms ease-in, color 300ms ease-in;
+  -ms-background: 300ms;
+  -webkit-background: 300ms;
+  -moz-background: 300ms;
+  -o-background: 300ms;
+}
+.section_pricing .btn-box a {
+  text-decoration: none;
+}
+.section_pricing .btn-box:hover {
+  background-color: #cfd1d3;
+  color: #fff;
+  cursor: pointer;
+}
+.section_pricing .btn-box:hover a {
+  color: #fff;
 }
 .section_pricing table {
   border-collapse: collapse;
@@ -329,6 +338,182 @@ figcaption {
 .section_pricing .rent-buy, .section_pricing .sell {
   background-color: #374249;
   color: #fff;
+}
+
+.section_contact {
+  background-color: #f3f7f9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 6rem;
+  gap: 3rem;
+}
+.section_contact div {
+  display: flex;
+  justify-content: space-around;
+  gap: 4rem;
+}
+.section_contact div .contact_form {
+  width: 50%;
+  height: 50%;
+  padding: 2rem;
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+}
+.section_contact div .contact_form input, .section_contact div .contact_form textarea {
+  padding: 1rem;
+  border: none;
+}
+.section_contact div .contact_form ::placeholder {
+  color: #797979;
+}
+.section_contact div .contact_form #name {
+  grid-column: 2/-1;
+}
+.section_contact div .contact_form input[type=email], .section_contact div .contact_form textarea {
+  grid-column: 1/-1;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #374249;
+}
+footer p {
+  text-align: center;
+}
+footer p a {
+  text-decoration: none;
+  color: red;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    padding-bottom: 15rem;
+    padding-right: 10rem;
+  }
+  header .location {
+    width: 100vw;
+  }
+  header nav {
+    width: 100vw;
+  }
+  .filter_btns {
+    align-items: flex-end;
+    padding: 2rem 5rem;
+  }
+  .section_offers {
+    display: grid;
+    grid-template-columns: repeat(2, 20rem);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+  }
+  .section_contact div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .section_contact div iframe {
+    height: 50%;
+  }
+  .section_contact div .contact_form {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  header {
+    height: auto;
+    width: 100vw;
+    height: none;
+    background-image: none;
+  }
+  header .navMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+    padding-bottom: 1rem;
+  }
+  header .navMain .location {
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    align-content: cente;
+  }
+  header .navMain ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2rem;
+  }
+  header .welcome_message {
+    width: 100vw;
+    height: 50vh;
+    background-color: black;
+  }
+  header .welcome_message h1 {
+    font-size: 2.2rem;
+  }
+  .filter_btns {
+    display: flex;
+    flex-direction: rows;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .section_offers {
+    display: grid;
+    grid-template-columns: repeat(1, 100vw);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+  }
+  .section_offers .offers1 {
+    width: 100%;
+  }
+  .section_offers .offers2 {
+    width: 100%;
+  }
+  .section_offers .offers3 {
+    width: 100%;
+  }
+  .section_offers .offers4 {
+    width: 100%;
+  }
+  .section_offers .offers5 {
+    width: 100%;
+  }
+  .section_offers .offers6 {
+    width: 100%;
+  }
+  table {
+    display: none;
+  }
+  .section_contact div {
+    gap: 2rem;
+  }
+  .section_contact div .contact_form {
+    width: 90%;
+  }
+  .section_contact div .contact_form select {
+    grid-column: 1/-1;
+    border: none;
+    padding: 1rem;
+  }
+  .section_contact div .contact_form #name {
+    grid-column: 1/-1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

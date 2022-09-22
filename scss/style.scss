@@ -1,10 +1,9 @@
 @import 'var';
+@import 'mixins';
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+  @include general;
+  font-family: 'Roboto';
   color: $font_color;
 }
 
@@ -12,20 +11,20 @@ html{
   font-size: 62.5%;
 }
 
-
+h2 {
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  color: $heading-color;
+}
 
 header {
- background-color: $footer_background;
- height: 90vh;
- background-image: url("../slike/intro.jpg");
- background-position: center;
- background-size: cover;
- background-repeat: no-repeat;
- display: flex;
- flex-direction: column;
- justify-content: space-between;
- padding-bottom: 10rem;
+  height: 90vh;
+  @include bimage(url("../slike/intro.jpg"));
+  @include flex_center(column, space-between);
+  padding-bottom: 10rem;
+
  .navMain {
+  width: 100vw;
   background-color: $footer_background;
   display: flex;
   gap: 3rem;
@@ -38,7 +37,6 @@ header {
     padding: 1rem;
     a {
       border-bottom: 1px solid #fff;
-
     }
   }
   }
@@ -81,7 +79,7 @@ header {
 
       width: 60%;
       padding-top: 1rem;
-      margin: 0 auto;
+      
       background-color: hsla(0, 0%, 20%, 0.568);
      
       h1 {
@@ -90,12 +88,14 @@ header {
         text-align: center;
         letter-spacing: 2px;
         padding-bottom: 1rem;
+        font-weight: 100;
       }
   
       p {
         color: #fff;
         text-align: center;
-        font-size: 1.4rem
+        font-size: 1.4rem;
+        font-weight:100
       };
     }
 
@@ -107,7 +107,7 @@ header {
   align-items: center;
   gap: 3rem;
   padding: 2rem 25rem;
-  div {
+  .btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -182,33 +182,12 @@ header {
   }
 }
 
-
-
-
-figure {
-  width: 80%;
-  position: relative;
-  img {width:80%;}
-}
-
-figcaption {
-  position: absolute;
-  font-size: 2.4rem;
-  background-color: transparent;
-  padding:2rem 3rem 5rem 2rem;
-  width: 80%;
-  height: 40%;
-  color: #333;
-  background-color: rgba(255, 255, 255, 0.589);
-}
-
 .section_pricing {
 
-  h2 {
-    text-transform: uppercase;
-    font-size: 2.2rem;
-    color: $heading-color;
+  .btn-box {
+    @include button
   }
+
 
   padding: 4rem 0 6rem 0;
   display: flex;
@@ -260,6 +239,167 @@ figcaption {
   .rent-buy, .sell {
     background-color: $header_background;
     color: #fff;
+  }
+}
+
+.section_contact {
+  background-color: $section_background;
+  // display: flex;
+  // flex-direction: column;
+  // align-items: center;
+  // justify-content: space-around;
+  @include flex_center;
+  padding: 6rem;
+  gap: 3rem;
+  
+  div {
+    display: flex;
+    justify-content: space-around;
+    gap: 4rem;
+
+    .contact_form {
+
+      width: 50%;
+      height: 50%;
+      padding: 2rem;
+      background-color: red;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 4rem;
+      row-gap: 2rem;
+      input, textarea {
+        padding: 1rem;
+        border: none;
+      }
+
+      ::placeholder {
+        color: $font_color;
+      }
+      #name {
+        grid-column: 2/-1;
+      }
+      input[type="email"], textarea {
+        grid-column: 1/-1;
+      }
+    }
+    }
+
+}
+
+footer {
+  padding: 1rem;
+  background-color: $footer_background;
+  p {
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: red;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  header {
+   
+    padding-bottom: 15rem;
+    padding-right: 10rem ;
+    .location {
+      width: 100vw;
+    }
+    nav {
+      width: 100vw;
+    }
+  }
+
+  .filter_btns {
+    align-items: flex-end;
+    padding: 2rem 5rem;
+  }
+
+  .section_offers {
+    @include grid_center(2)
+  }
+
+  .section_contact {
+    div {
+      @include flex_center;
+      iframe {
+        height: 50%;
+      }
+      .contact_form {
+        width: 90%;
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 600px){
+    header{
+      height: auto;
+      width: 100vw;
+      height: none;
+      background-image: none;
+
+      .navMain {
+
+        .location {
+          @include flex_center(rows, flex-start);
+          align-content: center;
+          width: 100%;
+          align-content: cente
+        }
+
+        @include flex_center;
+        gap: 2rem;
+        padding-bottom: 1rem;
+
+        ul {
+        @include flex_center;
+        gap: 2rem
+      }
+    }
+    .welcome_message {
+      h1 {
+        font-size: 2.2rem;
+      }
+      width: 100vw;
+      height: 50vh;
+      background-color: black;
+    }
+  }
+
+  .filter_btns {
+    @include flex_center(rows)
+  }
+  .section_offers {
+    @include grid_center(1, 100vw, 2rem);
+    @for $i from 1 through 6 {
+      .offers#{$i} {
+        width: 100%;
+      }
+    }
+  }
+
+  table {
+    display: none;
+  }
+
+  .section_contact {
+    div {
+      gap: 2rem;
+      .contact_form {
+        width: 90%;
+        select {
+          grid-column: 1/-1;
+          border: none;
+          padding: 1rem;
+        }
+        #name {
+          grid-column: 1/-1;
+        }
+      }
+    }
   }
 }
 
