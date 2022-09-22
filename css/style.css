@@ -85,6 +85,31 @@ body {
   background: rgb(218, 218, 250);
 }
 
+#trecasekcija {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#trecasekcija #tabele {
+  display: flex;
+  width: 337px;
+  flex-direction: column;
+  align-items: flex-end;
+}
+#trecasekcija #tabele table {
+  border: 1px solid grey;
+}
+#trecasekcija #tabele table td {
+  border-right: 1px solid grey;
+  padding: 0 72px;
+}
+#trecasekcija #tabele table th {
+  border-right: 1px solid grey;
+  background: orange;
+  color: white;
+  padding: 0 72px;
+}
+
 #drugim {
   margin: 1% 15%;
   display: flex;

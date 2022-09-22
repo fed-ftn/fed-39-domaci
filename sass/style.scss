@@ -96,6 +96,33 @@ body {
     background: $svetloplava;
 }
 
+#trecasekcija {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #tabele {
+        display: flex;
+        width: 337px;
+        flex-direction: column;align-items: flex-end;
+        table {
+            border: 1px solid $siva;
+
+            td {
+                border-right: 1px solid grey;
+                padding: 0 72px;
+            }
+
+            th {
+                border-right: 1px solid grey;
+                background:$narandzasta;
+                color: $bela;
+                padding: 0 72px;
+            }
+        }
+    }
+}
+
 #drugim {
     margin: 1% 15%;
     display: flex;
