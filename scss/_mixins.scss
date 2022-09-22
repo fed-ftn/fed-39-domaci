@@ -1,0 +1,15 @@
+@mixin box- {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+@mixin vendor($value) {
+  -webkit-transition: $value;
+  -moz-transition: $value;
+  -ms-transition: $value;
+  -o-transition:$value ;
+}

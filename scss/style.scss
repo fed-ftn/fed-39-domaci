@@ -52,6 +52,11 @@ header {
     li {
       padding: 0 2rem;
       color: white;
+      cursor: pointer;
+
+      &:hover {
+        border-bottom: 1.5px solid white;
+      }
     }
   }
 }
@@ -67,7 +72,8 @@ main {
 
     &_hbox {
       position: absolute;
-      right: 30%;
+      left: 20%;
+      right: 20%;
       top: 65%;
       background-color: rgba(55, 66, 73, 0.4);
 
@@ -93,6 +99,12 @@ main {
       color: $heading-color;
       background-color: white;
       border: 0.5px solid $grey-light-1;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $grey-light-1;
+        color: white;
+      }
     }
   }
 
@@ -101,6 +113,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: fit-content;
 
     &_box {
       width: 60%;
@@ -109,8 +122,30 @@ main {
       flex-wrap: wrap;
       margin: 3rem 0;
 
-      img {
-        width: 22%;
+      .img {
+        width: 23%;
+        height: 17rem;
+        position: relative;
+
+        &:hover .img_box {
+            display: block;
+        }
+
+        &_box {
+            display: none;
+            position: absolute;
+            background-color: rgba(243, 244, 245, 0.5);
+            width: 100%;
+
+            h3 {
+                margin: 1rem;
+            }
+        }
+
+        img{
+            width: 100%;
+            height: 100%;
+        }
       }
     }
   }
@@ -119,6 +154,10 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    button {
+      display: none;
+    }
     h1 {
       text-transform: uppercase;
       color: $heading-color;
@@ -190,31 +229,10 @@ main {
         background-color: $blue-dark;
         color: white;
 
-        &-1 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
-        &-2 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
+        &-1,
+        &-2,
         &-3 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
+          @include box-;
         }
       }
 
@@ -227,31 +245,10 @@ main {
         background-color: white;
         color: gray;
 
-        &-1 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
-        &-2 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
+        &-1,
+        &-2,
         &-3 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
+          @include box-;
         }
       }
 
@@ -264,31 +261,10 @@ main {
         background-color: white;
         color: gray;
 
-        &-1 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
-        &-2 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
-        }
-
+        &-1,
+        &-2,
         &-3 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 33.3%;
-          width: 100%;
-          border: 1px solid gray;
+          @include box-;
         }
       }
     }
@@ -360,5 +336,160 @@ footer {
 
   span {
     color: $orange-color;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  main {
+    .picture {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+      height: 40rem;
+      background: url(../slike/intro.jpg);
+      background-size: cover;
+      position: relative;
+
+      &_hbox {
+        position: absolute;
+        right: 5%;
+        left: 5%;
+        top: 50%;
+        background-color: rgba(55, 66, 73, 0.4);
+
+        h1 {
+          color: white;
+          letter-spacing: 4px;
+          font-weight: 200;
+          font-size: 50px;
+        }
+      }
+    }
+
+    .buttons {
+      padding-right: 4rem;
+    }
+
+    .gallery {
+      background-color: $grey-light-bcg;
+      display: flex;
+
+      &_box {
+        width: 100%;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 3rem 0;
+
+        .img {
+          width: 40%;
+          height: 20rem;
+        }
+      }
+    }
+
+    .contact {
+      display: flex;
+      flex-direction: column;
+      &_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      form {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+
+    div {
+      width: 100%;
+      height: 3rem;
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: center;
+      margin-left: 0;
+      margin: 1.3rem 0;
+
+      li {
+        padding: 1rem 0;
+      }
+    }
+  }
+
+  main {
+    .picture {
+      background: black;
+      height: 10rem;
+
+      &_hbox {
+        top: 0;
+        opacity: 100;
+        background-color: black;
+      }
+    }
+    .gallery {
+      &_box {
+        flex-direction: column;
+
+        .img {
+          width: 95%;
+
+          &_box {
+            display: block;
+            height: 7rem;
+          }
+        }
+      }
+    }
+
+    .buttons {
+      justify-content: center;
+      padding-right: 0;
+      padding: 0;
+
+      button {
+        width: 33%;
+      }
+    }
+
+    .tabela {
+      button {
+        display: block;
+        border: 1px solid gray;
+        border-radius: 50px;
+        padding: 15px;
+        background-color: white;
+        margin-bottom: 30px;
+      }
+      .price {
+        display: none;
+      }
+
+      .box {
+        display: none;
+      }
+    }
+
+    .contact {
+      form {
+        width: 90%;
+      }
+    }
   }
 }

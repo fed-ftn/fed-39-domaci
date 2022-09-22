@@ -47,6 +47,10 @@ header ul {
 header ul li {
   padding: 0 2rem;
   color: white;
+  cursor: pointer;
+}
+header ul li:hover {
+  border-bottom: 1.5px solid white;
 }
 
 main .picture {
@@ -59,7 +63,8 @@ main .picture {
 }
 main .picture_hbox {
   position: absolute;
-  right: 30%;
+  left: 20%;
+  right: 20%;
   top: 65%;
   background-color: rgba(55, 66, 73, 0.4);
 }
@@ -82,12 +87,18 @@ main .buttons button {
   color: #374249;
   background-color: white;
   border: 0.5px solid #cfd1d3;
+  cursor: pointer;
+}
+main .buttons button:hover {
+  background-color: #cfd1d3;
+  color: white;
 }
 main .gallery {
   background-color: #f3f7f9;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: fit-content;
 }
 main .gallery_box {
   width: 60%;
@@ -96,13 +107,34 @@ main .gallery_box {
   flex-wrap: wrap;
   margin: 3rem 0;
 }
-main .gallery_box img {
-  width: 22%;
+main .gallery_box .img {
+  width: 23%;
+  height: 17rem;
+  position: relative;
+}
+main .gallery_box .img:hover .img_box {
+  display: block;
+}
+main .gallery_box .img_box {
+  display: none;
+  position: absolute;
+  background-color: rgba(243, 244, 245, 0.5);
+  width: 100%;
+}
+main .gallery_box .img_box h3 {
+  margin: 1rem;
+}
+main .gallery_box .img img {
+  width: 100%;
+  height: 100%;
 }
 main .tabela {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+main .tabela button {
+  display: none;
 }
 main .tabela h1 {
   text-transform: uppercase;
@@ -169,23 +201,7 @@ main .tabela .box_2 {
   background-color: rgb(55, 66, 73);
   color: white;
 }
-main .tabela .box_2-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_2-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_2-3 {
+main .tabela .box_2-1, main .tabela .box_2-2, main .tabela .box_2-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,23 +218,7 @@ main .tabela .box_3 {
   background-color: white;
   color: gray;
 }
-main .tabela .box_3-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_3-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_3-3 {
+main .tabela .box_3-1, main .tabela .box_3-2, main .tabela .box_3-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -235,23 +235,7 @@ main .tabela .box_4 {
   background-color: white;
   color: gray;
 }
-main .tabela .box_4-1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_4-2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 33.3%;
-  width: 100%;
-  border: 1px solid gray;
-}
-main .tabela .box_4-3 {
+main .tabela .box_4-1, main .tabela .box_4-2, main .tabela .box_4-3 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,6 +301,129 @@ footer {
 }
 footer span {
   color: #f75311;
+}
+
+@media screen and (max-width: 900px) {
+  main .picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40rem;
+    background: url(../slike/intro.jpg);
+    background-size: cover;
+    position: relative;
+  }
+  main .picture_hbox {
+    position: absolute;
+    right: 5%;
+    left: 5%;
+    top: 50%;
+    background-color: rgba(55, 66, 73, 0.4);
+  }
+  main .picture_hbox h1 {
+    color: white;
+    letter-spacing: 4px;
+    font-weight: 200;
+    font-size: 50px;
+  }
+  main .buttons {
+    padding-right: 4rem;
+  }
+  main .gallery {
+    background-color: #f3f7f9;
+    display: flex;
+  }
+  main .gallery_box {
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+  }
+  main .gallery_box .img {
+    width: 40%;
+    height: 20rem;
+  }
+  main .contact {
+    display: flex;
+    flex-direction: column;
+  }
+  main .contact_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  main .contact form {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+  }
+  header div {
+    width: 100%;
+    height: 3rem;
+  }
+  header ul {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin: 1.3rem 0;
+  }
+  header ul li {
+    padding: 1rem 0;
+  }
+  main .picture {
+    background: black;
+    height: 10rem;
+  }
+  main .picture_hbox {
+    top: 0;
+    opacity: 100;
+    background-color: black;
+  }
+  main .gallery_box {
+    flex-direction: column;
+  }
+  main .gallery_box .img {
+    width: 95%;
+  }
+  main .gallery_box .img_box {
+    display: block;
+    height: 7rem;
+  }
+  main .buttons {
+    justify-content: center;
+    padding-right: 0;
+    padding: 0;
+  }
+  main .buttons button {
+    width: 33%;
+  }
+  main .tabela button {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 50px;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 30px;
+  }
+  main .tabela .price {
+    display: none;
+  }
+  main .tabela .box {
+    display: none;
+  }
+  main .contact form {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
