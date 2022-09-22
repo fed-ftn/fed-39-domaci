@@ -1,3 +1,16 @@
+header {
+  top: 0;
+  width: 100%;
+}
+header img {
+  margin: 1%;
+}
 
+.up {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
 
 /*# sourceMappingURL=style.css.map */

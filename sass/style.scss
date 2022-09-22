@@ -1,0 +1,16 @@
+@import 'mixins';
+@import 'vars';
+
+header {
+    top: 0;
+    width: 100%;
+
+    img {
+        margin: 1%;
+    }
+}
+
+.up {
+    @include flex;
+    justify-content: space-around;
+}
