@@ -1,0 +1,189 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5; }
+
+img {
+  width: 100%; }
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden; }
+
+#header {
+  height: 80vh;
+  background: url(../slike/intro.jpg) no-repeat center center/cover; }
+  #header #navbar {
+    display: flex; }
+    #header #navbar .map {
+      background-color: #f75311;
+      width: 20%;
+      padding: 15px 20px; }
+      #header #navbar .map i {
+        color: white;
+        margin-right: 5px; }
+      #header #navbar .map a {
+        color: white;
+        text-decoration: underline; }
+    #header #navbar .nav {
+      background-color: #374249;
+      width: 80%;
+      padding: 15px 20px; }
+      #header #navbar .nav a {
+        color: white;
+        text-decoration: none;
+        margin-right: 70px;
+        font-size: 14px;
+        padding-bottom: 2px; }
+        #header #navbar .nav a:hover {
+          border-bottom: 2px solid white; }
+  #header .main-heading {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 20%;
+    color: white;
+    background-color: #37424977;
+    padding: 10px 0; }
+    #header .main-heading h1 {
+      font-size: 2.5rem; }
+
+#search .search-cont {
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: flex-end;
+  padding: 20px 10px; }
+  #search .search-cont .item {
+    margin: 0 15px;
+    border: 1px solid gainsboro;
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer; }
+    #search .search-cont .item:hover {
+      color: white;
+      background-color: #cfd1d3; }
+
+#picture {
+  background-color: #f3f7f9; }
+  #picture .images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px 10px;
+    gap: 15px; }
+    #picture .images .pic {
+      position: relative; }
+      #picture .images .pic:hover {
+        cursor: pointer; }
+        #picture .images .pic:hover .pic-head {
+          visibility: visible;
+          opacity: 1; }
+      #picture .images .pic img {
+        height: 300px; }
+      #picture .images .pic-head {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.566);
+        width: 100%;
+        padding: 10px 10px;
+        height: 33%;
+        visibility: hidden;
+        transition: visibility 0s ease, opacity 1s ease;
+        opacity: 0; }
+
+#footer {
+  text-align: center;
+  background-color: #374249;
+  font-size: 0.8rem;
+  padding: 5px 0; }
+  #footer p {
+    color: #797979;
+    font-size: 0.8rem; }
+    #footer p span {
+      color: #f75311; }
+
+#table {
+  text-align: center; }
+  #table table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 30px auto; }
+    #table table .bg {
+      background-color: #374249;
+      color: white;
+      border: 1px solid #797979; }
+    #table table .orange {
+      color: white;
+      background-color: #f75311;
+      border: 1px solid #797979; }
+    #table table td {
+      padding: 5px; }
+      #table table td:not(:first-child) {
+        border: 1px solid #797979; }
+  #table h2 {
+    margin: 30px 0 0 0;
+    color: #797979; }
+  #table p {
+    color: #797979;
+    margin-bottom: 20px; }
+  #table .item2 {
+    width: 120px;
+    border: 1px solid #797979;
+    border-radius: 25px;
+    margin: auto;
+    height: auto;
+    cursor: pointer;
+    display: none;
+    margin-bottom: 20px; }
+    #table .item2 p {
+      text-align: center;
+      margin-top: 17px;
+      font-size: 0.8rem; }
+    #table .item2:hover {
+      color: white;
+      background-color: #cfd1d3; }
+
+#contact {
+  background-color: #f3f7f9; }
+  #contact .contact-cont {
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    padding: 15px;
+    padding-bottom: 70px; }
+    #contact .contact-cont .form {
+      background-color: #f75311;
+      height: 50%;
+      padding: 20px;
+      margin-left: 20px;
+      width: 80%; }
+      #contact .contact-cont .form select {
+        width: 15%;
+        text-align: center;
+        background-color: white;
+        margin-right: 23px;
+        padding: 5px; }
+      #contact .contact-cont .form input[type="text"] {
+        width: 80%;
+        margin-top: 15px;
+        padding: 5px; }
+      #contact .contact-cont .form input[type="email"] {
+        width: 100%;
+        margin-top: 15px;
+        padding: 5px; }
+      #contact .contact-cont .form textarea {
+        width: 100%;
+        height: 80px;
+        margin-top: 20px;
+        padding: 5px; }
+  #contact h2 {
+    padding: 30px 0 0 0;
+    color: #797979;
+    text-align: center; }

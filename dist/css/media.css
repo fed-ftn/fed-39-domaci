@@ -1,0 +1,97 @@
+@media screen and (max-width: 1168px) {
+  #contact .contact-cont .form input[type="text"] {
+    width: 100%;
+    margin-top: 15px;
+    padding: 5px; } }
+
+@media screen and (max-width: 1024px) {
+  #contact .contact-cont {
+    flex-direction: column;
+    align-items: center; }
+    #contact .contact-cont .form {
+      margin-top: 30px;
+      width: 100%; }
+      #contact .contact-cont .form select {
+        width: 15%;
+        text-align: center;
+        background-color: white;
+        margin-right: 5px;
+        padding: 5px; }
+      #contact .contact-cont .form input[type="text"] {
+        width: 100%;
+        margin-top: 15px;
+        padding: 5px; }
+  #picture .images {
+    grid-template-columns: repeat(2, 1fr); } }
+
+@media screen and (max-width: 786px) {
+  #contact .contact-cont {
+    flex-direction: column;
+    align-items: center; }
+    #contact .contact-cont .form {
+      margin-top: 30px;
+      width: 100%; }
+      #contact .contact-cont .form select {
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        margin-right: 23px;
+        padding: 5px; }
+      #contact .contact-cont .form input[type="text"] {
+        width: 100%;
+        margin-top: 15px;
+        padding: 5px; }
+  #picture .images {
+    grid-template-columns: repeat(1, 1fr); }
+  #table {
+    text-align: center; }
+    #table table {
+      display: none; }
+    #table .item2 {
+      display: block; }
+  #header {
+    height: 80vh;
+    background: black; }
+    #header #navbar {
+      flex-direction: column; }
+      #header #navbar .map {
+        width: 100%;
+        text-align: center; }
+      #header #navbar .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-items: center;
+        width: 100%;
+        padding: 20px 0; }
+        #header #navbar .nav a {
+          color: white;
+          text-decoration: none;
+          margin-right: 0;
+          padding: 5px 0; }
+          #header #navbar .nav a:hover {
+            color: #f75311;
+            border: none; }
+    #header .main-heading {
+      width: 100%;
+      text-align: center;
+      margin-top: 10%;
+      color: white;
+      background-color: transparent; }
+      #header .main-heading h1 {
+        font-size: 2.5rem; }
+  #search .search-cont {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 20px 10px; }
+    #search .search-cont .item {
+      margin: 0 15px;
+      border: 1px solid gainsboro;
+      padding: 10px 15px;
+      border-radius: 25px;
+      cursor: pointer; }
+      #search .search-cont .item:hover {
+        color: white;
+        background-color: #cfd1d3; } }
