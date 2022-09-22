@@ -1,0 +1,27 @@
+@mixin filter() {
+  .filter {
+    @include widthHeight(100%, 100px);
+    display: flex;
+    justify-content: end;
+    .buttons {
+      width: 50%;
+      display: flex;
+      align-items: center;
+
+      div {
+        margin-left: 25px;
+        color: $fontcolor;
+        border: 0.5px solid lightgray;
+        @include center();
+        width: auto;
+        border-radius: 20px;
+        height: fit-content;
+        padding: 15px 25px;
+        &:hover {
+          background-color: gray;
+          color: white;
+        }
+      }
+    }
+  }
+}

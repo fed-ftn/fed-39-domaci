@@ -1,0 +1,35 @@
+@mixin navbar() {
+  .navbar {
+    display: flex;
+    @include widthHeight(100%, 70px);
+    background-color: $grayish;
+    .links {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 50%;
+      p {
+        font-size: 20px;
+        margin-left: 50px;
+        color: white;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .location {
+        @include widthHeight(30%, 100%);
+        align-items: center;
+        display: flex;
+        background-color: $orange;
+        a {
+          font-size: 22px;
+          color: white;
+        }
+        img {
+          margin-left: 25px;
+          height: 70%;
+        }
+      }
+    }
+  }
+}

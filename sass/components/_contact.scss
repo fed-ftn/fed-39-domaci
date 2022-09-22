@@ -1,0 +1,43 @@
+@mixin contact() {
+  .contact {
+    background-color: #f3f7f9;
+    height: 60vh;
+    @include center();
+    flex-direction: column;
+    h1 {
+      margin-bottom: 50px;
+    }
+    .wrapper {
+      text-align: center;
+      width: 80%;
+      .content {
+        display: flex;
+        justify-content: space-around;
+        .forma {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          background-color: #f75311;
+          @include widthHeight(50%, 200px);
+          padding: 20px;
+          select {
+            margin-left: 30px;
+            @include widthHeight(25%, 40px);
+          }
+          [type="text"] {
+            margin-left: 30px;
+            @include widthHeight(60%, 40px);
+          }
+          [type="email"] {
+            margin-left: 30px;
+            @include widthHeight(90%, 20px);
+          }
+          [type="textarea"] {
+            margin-left: 30px;
+            @include widthHeight(90%, 50px);
+          }
+        }
+      }
+    }
+  }
+}
