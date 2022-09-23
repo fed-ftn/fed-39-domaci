@@ -10,6 +10,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h2 {
   text-transform: uppercase;
   font-size: 2.2rem;
@@ -33,15 +37,16 @@ header .navMain {
   background-color: #374249;
   display: flex;
   gap: 3rem;
+  height: 50px;
 }
-header .navMain .location {
+header .navMain .locations {
   display: flex;
   align-items: center;
   width: 20vw;
   background-color: #f75311;
   padding: 1rem;
 }
-header .navMain .location a {
+header .navMain .locations a {
   border-bottom: 1px solid #fff;
 }
 header img {
@@ -109,6 +114,10 @@ header .welcome_message p {
   border-radius: 333px;
   align-self: center;
   transition: background 300ms ease-in, color 300ms ease-in;
+  -ms-background: 300ms;
+  -webkit-background: 300ms;
+  -moz-background: 300ms;
+  -o-background: 300ms;
 }
 .filter_btns .btn a {
   text-decoration: none;
@@ -126,6 +135,10 @@ header .welcome_message p {
   padding: 3rem 20rem;
   display: grid;
   grid-template-columns: repeat(4, 20rem);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -292,6 +305,7 @@ header .welcome_message p {
   -webkit-background: 300ms;
   -moz-background: 300ms;
   -o-background: 300ms;
+  display: none;
 }
 .section_pricing .btn-box a {
   text-decoration: none;
@@ -304,38 +318,44 @@ header .welcome_message p {
 .section_pricing .btn-box:hover a {
   color: #fff;
 }
-.section_pricing table {
+
+table {
   border-collapse: collapse;
   text-align: center;
   border: 1px #444 solid;
 }
-.section_pricing .table_container {
+
+.table_container {
   display: flex;
   width: 50%;
 }
-.section_pricing .table_container td {
+.table_container td {
   padding: 1rem;
 }
-.section_pricing .location, .section_pricing .pricing {
+
+.location, .pricing {
   width: 70%;
   height: 10rem;
 }
-.section_pricing .location {
+
+.location {
   align-self: self-end;
 }
-.section_pricing .location td[rowspan="3"] {
+.location td[rowspan="3"] {
   background-color: red;
   color: #fff;
 }
-.section_pricing .location td {
+.location td {
   background-color: #374249;
   color: #fff;
 }
-.section_pricing .pricing td[colspan="3"] {
+
+.pricing td[colspan="3"] {
   background-color: red;
   color: #fff;
 }
-.section_pricing .rent-buy, .section_pricing .sell {
+
+.rent-buy, .sell {
   background-color: #374249;
   color: #fff;
 }
@@ -390,10 +410,13 @@ footer p a {
   color: red;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   header {
     padding-bottom: 15rem;
     padding-right: 10rem;
+  }
+  header .welcome_message {
+    padding: 7rem;
   }
   header .location {
     width: 100vw;
@@ -418,9 +441,10 @@ footer p a {
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 0rem;
   }
   .section_contact div iframe {
-    height: 50%;
+    height: 80%;
   }
   .section_contact div .contact_form {
     width: 90%;
@@ -500,8 +524,15 @@ footer p a {
   table {
     display: none;
   }
+  .section_pricing .btn-box {
+    display: block;
+  }
   .section_contact div {
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
   }
   .section_contact div .contact_form {
     width: 90%;

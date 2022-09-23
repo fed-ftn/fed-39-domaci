@@ -11,6 +11,10 @@ html{
   font-size: 62.5%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 h2 {
   text-transform: uppercase;
   font-size: 2.2rem;
@@ -28,8 +32,9 @@ header {
   background-color: $footer_background;
   display: flex;
   gap: 3rem;
+  height: 50px;
 
-  .location {
+  .locations {
     display: flex;
     align-items: center;
     width: 20vw;
@@ -79,7 +84,6 @@ header {
 
       width: 60%;
       padding-top: 1rem;
-      
       background-color: hsla(0, 0%, 20%, 0.568);
      
       h1 {
@@ -108,33 +112,37 @@ header {
   gap: 3rem;
   padding: 2rem 25rem;
   .btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 2rem;
-    border: 1px solid rgb(201, 200, 200);
-    border-radius: 333px;
-    align-self: center;
-    transition: background 300ms ease-in, color 300ms ease-in;
-    a {
-      text-decoration: none;
-    }
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // padding: 1rem 2rem;
+    // border: 1px solid rgb(201, 200, 200);
+    // border-radius: 333px;
+    // align-self: center;
+    // transition: background 300ms ease-in, color 300ms ease-in;
+    // a {
+    //   text-decoration: none;
+    // }
 
-    &:hover {
-      background-color: $btn_color_hover;
-      color: #fff;
-      cursor: pointer;
-    }
-    &:hover a {
-      color: #fff;
-    }
+    // &:hover {
+    //   background-color: $btn_color_hover;
+    //   color: #fff;
+    //   cursor: pointer;
+    // }
+    // &:hover a {
+    //   color: #fff;
+    // }
+    @include button;
+
   }
+ 
 }
 
 .section_offers {
   padding: 3rem 20rem;
-  display: grid;
-  grid-template-columns: repeat(4, 20rem);
+  // display: grid;
+  // grid-template-columns: repeat(4, 20rem);
+  @include grid_center(4, 20rem);
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -181,14 +189,7 @@ header {
     }
   }
 }
-
 .section_pricing {
-
-  .btn-box {
-    @include button
-  }
-
-
   padding: 4rem 0 6rem 0;
   display: flex;
   flex-direction: column;
@@ -196,6 +197,11 @@ header {
   align-items: center;
   gap: 3rem;
 
+  .btn-box {
+    @include button;
+    display: none;
+  }
+}
   table {
     border-collapse: collapse;
     
@@ -211,7 +217,7 @@ header {
     }
   }
   
-  .location, .pricing {
+    .location, .pricing {
     width: 70%;
     height: 10rem;
   }
@@ -240,7 +246,7 @@ header {
     background-color: $header_background;
     color: #fff;
   }
-}
+
 
 .section_contact {
   background-color: $section_background;
@@ -298,9 +304,11 @@ footer {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1000px) {
   header {
-   
+   .welcome_message {
+    padding: 7rem;
+   }
     padding-bottom: 15rem;
     padding-right: 10rem ;
     .location {
@@ -322,9 +330,11 @@ footer {
 
   .section_contact {
     div {
-      @include flex_center;
+      @include flex_center(column);
+      gap: 0rem;
+
       iframe {
-        height: 50%;
+        height: 80%;
       }
       .contact_form {
         width: 90%;
@@ -350,12 +360,12 @@ footer {
           align-content: cente
         }
 
-        @include flex_center;
+        @include flex_center(column);
         gap: 2rem;
         padding-bottom: 1rem;
 
         ul {
-        @include flex_center;
+        @include flex_center(column);
         gap: 2rem
       }
     }
@@ -370,7 +380,8 @@ footer {
   }
 
   .filter_btns {
-    @include flex_center(rows)
+    @include flex_center(rows);
+    
   }
   .section_offers {
     @include grid_center(1, 100vw, 2rem);
@@ -385,10 +396,18 @@ footer {
     display: none;
   }
 
+  .section_pricing {
+    .btn-box {
+      display: block;
+    }
+  }
+
   .section_contact {
     div {
       gap: 2rem;
+      @include flex_center(column);
       .contact_form {
+      
         width: 90%;
         select {
           grid-column: 1/-1;
