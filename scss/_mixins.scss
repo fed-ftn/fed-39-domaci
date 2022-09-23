@@ -1,9 +1,9 @@
 
-@mixin prefix($property, $value, $prefixes: ()) {
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $value;
-  }
-}
+// @mixin prefix($property, $value, $prefixes: ()) {
+//   @each $prefix in $prefixes {
+//     #{'-' + $prefix + '-' + $property}: $value;
+//   }
+// }
 
 @mixin general {
   padding: 0;
@@ -36,7 +36,7 @@
   border-radius: 333px;
   align-self: center;
   transition: background 300ms ease-in, color 300ms ease-in;
-  @include prefix(background, 300ms, ms webkit moz o);
+  //@include prefix(background, 300ms, ms webkit moz o);
 
   a {
     text-decoration: none;

@@ -113,6 +113,10 @@ header .welcome_message p {
   border-radius: 333px;
   align-self: center;
   transition: background 300ms ease-in, color 300ms ease-in;
+  -ms-background: 300ms;
+  -webkit-background: 300ms;
+  -moz-background: 300ms;
+  -o-background: 300ms;
 }
 .filter_btns .btn a {
   text-decoration: none;
@@ -296,6 +300,10 @@ header .welcome_message p {
   border-radius: 333px;
   align-self: center;
   transition: background 300ms ease-in, color 300ms ease-in;
+  -ms-background: 300ms;
+  -webkit-background: 300ms;
+  -moz-background: 300ms;
+  -o-background: 300ms;
   display: none;
 }
 .section_pricing .btn-box a {
@@ -402,6 +410,10 @@ footer p a {
 }
 
 @media screen and (max-width: 1000px) {
+  header {
+    padding-bottom: 15rem;
+    padding-right: 10rem;
+  }
   header .welcome_message {
     padding: 7rem;
   }
@@ -442,8 +454,7 @@ footer p a {
     height: auto;
     width: 100vw;
     height: none;
-    padding-bottom: 0rem;
-    padding-right: 0rem;
+    background-image: none;
   }
   header .navMain {
     display: flex;
@@ -455,8 +466,6 @@ footer p a {
   }
   header .navMain .locations {
     width: 100vw;
-    justify-content: center;
-    padding-bottom: 0;
   }
   header .navMain .location {
     display: flex;
@@ -465,7 +474,7 @@ footer p a {
     justify-content: flex-start;
     align-content: center;
     width: 100%;
-    align-content: center;
+    align-content: cente;
   }
   header .navMain ul {
     display: flex;
@@ -487,7 +496,6 @@ footer p a {
     flex-direction: rows;
     align-items: center;
     justify-content: space-around;
-    padding-top: 2rem;
   }
   .section_offers {
     display: grid;

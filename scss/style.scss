@@ -40,6 +40,7 @@ header {
     width: 20vw;
     background-color: $eye_catching;
     padding: 1rem;
+
     a {
       border-bottom: 1px solid #fff;
     }
@@ -112,26 +113,7 @@ header {
   gap: 3rem;
   padding: 2rem 25rem;
   .btn {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // padding: 1rem 2rem;
-    // border: 1px solid rgb(201, 200, 200);
-    // border-radius: 333px;
-    // align-self: center;
-    // transition: background 300ms ease-in, color 300ms ease-in;
-    // a {
-    //   text-decoration: none;
-    // }
 
-    // &:hover {
-    //   background-color: $btn_color_hover;
-    //   color: #fff;
-    //   cursor: pointer;
-    // }
-    // &:hover a {
-    //   color: #fff;
-    // }
     @include button;
 
   }
@@ -140,8 +122,6 @@ header {
 
 .section_offers {
   padding: 3rem 20rem;
-  // display: grid;
-  // grid-template-columns: repeat(4, 20rem);
   @include grid_center(4, 20rem);
   justify-content: center;
   align-items: center;
@@ -250,10 +230,6 @@ header {
 
 .section_contact {
   background-color: $section_background;
-  // display: flex;
-  // flex-direction: column;
-  // align-items: center;
-  // justify-content: space-around;
   @include flex_center;
   padding: 6rem;
   gap: 3rem;
@@ -309,8 +285,8 @@ footer {
    .welcome_message {
     padding: 7rem;
    }
-    padding-bottom: 15rem;
-    padding-right: 10rem ;
+    // padding-bottom: 15rem;
+    // padding-right: 10rem ;
     .location {
       width: 100vw;
     }
@@ -349,15 +325,23 @@ footer {
       height: auto;
       width: 100vw;
       height: none;
-      background-image: none;
+      // background-image: none;
+      padding-bottom: 0rem;
+      padding-right: 0rem;
 
       .navMain {
+
+        .locations {
+          width: 100vw;
+          justify-content: center;
+          padding-bottom: 0;
+        }
 
         .location {
           @include flex_center(rows, flex-start);
           align-content: center;
           width: 100%;
-          align-content: cente
+          align-content: center;
         }
 
         @include flex_center(column);
@@ -381,6 +365,7 @@ footer {
 
   .filter_btns {
     @include flex_center(rows);
+    padding-top: 2rem
     
   }
   .section_offers {
