@@ -231,7 +231,7 @@ header {
 .section_contact {
   background-color: $section_background;
   @include flex_center;
-  padding: 6rem;
+  padding-top: 6rem;
   gap: 3rem;
   
   div {
