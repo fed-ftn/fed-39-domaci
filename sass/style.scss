@@ -12,9 +12,8 @@ header {
 }
 
 .up {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    
+    @include flex2;
     justify-content: flex-start;
     background: $siva;
 
@@ -59,9 +58,7 @@ body {
     background: $prozirna ;
     position: absolute;
     left: 28%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
     top: 70%;
     color: $bela;
     width: 51%;
@@ -97,9 +94,7 @@ body {
 }
 
 #trecasekcija {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex;
 
     p {
         color: $siva;
@@ -278,10 +273,9 @@ table {
 
     #divl {
         margin: 0 10%;
-        display: flex;
-        flex-direction: column;
+        @include flex;
         justify-content: space-around;
-        align-items: center;
+       
     }
 
     iframe {
@@ -306,10 +300,9 @@ table {
 @media screen and (max-width:480px) {
     #divl {
         margin: 0;
-        display: flex;
-        flex-direction: column;
+        @include flex;
         justify-content: space-around;
-        align-items: center;
+        
     }
 
     form {
@@ -361,9 +354,7 @@ table {
     }
 
     .up {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex;
         justify-content: flex-start;
 
     }
@@ -376,9 +367,7 @@ table {
 
     .up .upright {
         width: 25%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex;
     }
 
     #drugimobilni {
@@ -429,12 +418,11 @@ table {
         background: $crna;
         position: absolute;
         left: auto;
-        display: flex;
+       @include flex;
         top: auto;
-        color: white;
+        color: $bela;
         width: 100%;
-        flex-direction: column;
-        align-items: center;
+       
 
         h1 {
             text-align: center;

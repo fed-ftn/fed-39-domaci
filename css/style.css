@@ -242,8 +242,8 @@ table .empty {
     margin: 0 10%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
   }
   iframe {
     width: 51%;
@@ -264,8 +264,8 @@ table .empty {
     margin: 0;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
   }
   form {
     background: #f75311;
@@ -358,11 +358,11 @@ table .empty {
     position: absolute;
     left: auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     top: auto;
     color: white;
     width: 100%;
-    flex-direction: column;
-    align-items: center;
   }
   #transparentdiv h1 {
     text-align: center;
