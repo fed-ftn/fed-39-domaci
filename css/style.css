@@ -267,6 +267,10 @@ table .empty {
     align-items: center;
     justify-content: space-around;
   }
+  #hero {
+    width: 100%;
+    visibility: hidden;
+  }
   form {
     background: #f75311;
     width: 86%;
