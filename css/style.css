@@ -148,7 +148,8 @@ input:active {
   outline: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   outline: none;
 }
 
@@ -157,7 +158,8 @@ textarea:focus, input:focus {
   margin-right: 0;
 }
 
-textarea, input {
+textarea,
+input {
   outline: none;
   border: none;
   margin: 1% 2%;
@@ -196,7 +198,8 @@ table th {
   background: #f75311;
   color: white;
 }
-table th, table td {
+table th,
+table td {
   width: 10%;
   padding: 1% 2%;
 }
@@ -211,6 +214,10 @@ table .empty {
 }
 
 #showbutton {
+  display: none;
+}
+
+#drugimobilni {
   display: none;
 }
 
@@ -309,6 +316,43 @@ table .empty {
     flex-direction: column;
     align-items: center;
   }
+  #drugimobilni {
+    display: block;
+  }
+  #drugim {
+    display: none;
+  }
+  #drugasekcija {
+    padding: 0.5%;
+  }
+  .textinphoto {
+    color: black;
+    background: rgba(255, 255, 255, 0.445);
+    padding: 2%;
+  }
+  #slika1 {
+    background-image: url("../slike/1.jpg");
+  }
+  #slika2 {
+    background-image: url("../slike/2.jpg");
+  }
+  #slika3 {
+    background-image: url("../slike/3.jpg");
+  }
+  #slika4 {
+    background-image: url("../slike/4.jpg");
+  }
+  #slika5 {
+    background-image: url("../slike/5.jpg");
+  }
+  #slika6 {
+    background-image: url("../slike/6.jpg");
+  }
+  #slika1, #slika2, #slika3, #slika4, #slika5, #slika6 {
+    height: 200px;
+    background-size: cover;
+    margin: 2%;
+  }
   #transparentdiv {
     background: black;
     position: absolute;
@@ -332,12 +376,8 @@ table .empty {
     padding: 17px;
     background: rgba(221, 221, 221, 0);
   }
-  #drugim {
-    margin: 1% 15%;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+  .orangediv img {
+    width: 9%;
   }
 }
 

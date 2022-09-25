@@ -100,8 +100,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-p{color:$siva;}
-  
+
+    p {
+        color: $siva;
+    }
+
 }
 
 #drugim {
@@ -136,31 +139,57 @@ footer {
 }
 
 
-#lastsec{text-align: center;
-    padding: 2%;}
+#lastsec {
+    text-align: center;
+    padding: 2%;
+}
 
-#divl{display: flex;}
-.full{    width: 90%;}
-.full2{    margin-top:2%;width: 96%;}
-fieldset{background: $narandzasta;    border: none;}
+#divl {
+    display: flex;
+}
+
+.full {
+    width: 90%;
+}
+
+.full2 {
+    margin-top: 2%;
+    width: 96%;
+}
+
+fieldset {
+    background: $narandzasta;
+    border: none;
+}
+
 input:active {
     border: none;
-    outline:none;
-  }
-  textarea:focus, input:focus{
     outline: none;
 }
-#txt{    width: 56%;
-    margin-right: 0;}
-textarea, input{
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+#txt {
+    width: 56%;
+    margin-right: 0;
+}
+
+textarea,
+input {
     outline: none;
     border: none;
     margin: 1% 2%;
     padding: 1%;
 }
 
-form{background:$narandzasta;
-    width: 50%;    height: 170px;}
+form {
+    background: $narandzasta;
+    width: 50%;
+    height: 170px;
+}
 
 #divl {
     margin: 0 10%;
@@ -169,49 +198,82 @@ form{background:$narandzasta;
     justify-content: space-around;
 }
 
-iframe{width: 35%;
+iframe {
+    width: 35%;
     height: 321px;
-margin-bottom: 2%;}
+    margin-bottom: 2%;
+}
 
-table{
+table {
     margin-top: 2%;
     border-collapse: collapse;
-    .siv{background: $tamnosiva;color:$bela;}
+
+    .siv {
+        background: $tamnosiva;
+        color: $bela;
+    }
+
     text-align: center;
-    th{background: $narandzasta;color:$bela;}
-    th,td{width: 10%;padding: 1% 2%;}
-    td{border:1px solid $siva;}
-    th{border:1px solid $narandzasta;}
-    .empty{border:none;}
+
+    th {
+        background: $narandzasta;
+        color: $bela;
+    }
+
+    th,
+    td {
+        width: 10%;
+        padding: 1% 2%;
+    }
+
+    td {
+        border: 1px solid $siva;
+    }
+
+    th {
+        border: 1px solid $narandzasta;
+    }
+
+    .empty {
+        border: none;
+    }
 }
-#showbutton{display: none;}
+
+#showbutton {
+    display: none;
+}
+
+#drugimobilni {
+    display: none;
+}
+
 //tablet
-@media screen  and (min-width:481px) and (max-width:720px){
+@media screen and (min-width:481px) and (max-width:720px) {
     .orangediv {
-       
+
         width: 24%;
-        
+
     }
 
     .up .upright {
         width: 69%;
     }
 
-    #prvasekcija  {
-        input{
-        font-size: 10px;
-       }
+    #prvasekcija {
+        input {
+            font-size: 10px;
+        }
     }
 
     #transparentdiv {
         text-align: center;
         top: 21%;
-        
+
     }
 
     #drugim img {
         width: 46%;
-        
+
     }
 
     #divl {
@@ -224,8 +286,9 @@ table{
 
     iframe {
         width: 51%;
-       
+
     }
+
     #txt {
         width: 51%;
         margin-right: 0;
@@ -240,7 +303,7 @@ table{
 }
 
 //telefon
-@media screen  and (max-width:480px){
+@media screen and (max-width:480px) {
     #divl {
         margin: 0;
         display: flex;
@@ -255,6 +318,7 @@ table{
         height: 160px;
         margin-bottom: 2%;
     }
+
     #txt {
         width: 94%;
         margin-right: 0;
@@ -262,29 +326,38 @@ table{
 
     iframe {
         width: 80%;
-       
+
     }
 
-    #browser{width: 94%;}
-    table{display: none;}
-    #showbutton{display: block;}
+    #browser {
+        width: 94%;
+    }
+
+    table {
+        display: none;
+    }
+
+    #showbutton {
+        display: block;
+    }
 
     #prvasekcija {
-        
+
         display: flex;
         flex-direction: row;
         justify-content: space-around;
     }
+
     #prvasekcija input {
-       
+
         font-size: 18px;
-       
+
     }
 
     .orangediv {
-        
+
         width: 100%;
-        
+
     }
 
     .up {
@@ -292,19 +365,64 @@ table{
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-       
+
     }
 
     .up .upright a {
-        
+
         text-decoration: none;
         margin: 17%;
     }
+
     .up .upright {
         width: 25%;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    #drugimobilni {
+        display: block;
+    }
+
+    #drugim {
+        display: none;
+    }
+    #drugasekcija{padding: 0.5%;}
+    .textinphoto {
+        color: $crna;
+        background: $lightwhite;
+        padding: 2%;
+    }
+
+    #slika1 {
+        background-image: url("../slike/1.jpg");
+    }
+
+    #slika2 {
+        background-image: url("../slike/2.jpg");
+    }
+
+    #slika3 {
+        background-image: url("../slike/3.jpg");
+    }
+
+    #slika4 {
+        background-image: url("../slike/4.jpg");
+    }
+
+    #slika5 {
+        background-image: url("../slike/5.jpg");
+    }
+
+    #slika6 {
+        background-image: url("../slike/6.jpg");
+    }
+
+       #slika1,#slika2, #slika3, #slika4, #slika5, #slika6  {
+        height: 200px;
+        background-size: cover;
+        margin: 2%;
     }
 
     #transparentdiv {
@@ -318,23 +436,25 @@ table{
         flex-direction: column;
         align-items: center;
 
-        h1{text-align: center;}
+        h1 {
+            text-align: center;
+        }
     }
 
-    #trecasekcija{ input {
-        border-radius: 30px;
-        border: 1px solid $siva;
-        color: $siva;
-        margin: 2%;
-        font-size: 15px;
-        padding: 17px;
-        background: $transparent;
-    }}
-    #drugim {
-        margin: 1% 15%;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: center;
+    #trecasekcija {
+        input {
+            border-radius: 30px;
+            border: 1px solid $siva;
+            color: $siva;
+            margin: 2%;
+            font-size: 15px;
+            padding: 17px;
+            background: $transparent;
+        }
     }
+
+    .orangediv img {
+        width: 9%;
+    }
+
 }
