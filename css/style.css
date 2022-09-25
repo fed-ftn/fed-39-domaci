@@ -210,6 +210,10 @@ table .empty {
   border: none;
 }
 
+#showbutton {
+  display: none;
+}
+
 @media screen and (min-width: 481px) and (max-width: 720px) {
   .orangediv {
     width: 24%;
@@ -246,6 +250,94 @@ table .empty {
     width: 86%;
     height: 140px;
     margin-bottom: 2%;
+  }
+}
+@media screen and (max-width: 480px) {
+  #divl {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  form {
+    background: #f75311;
+    width: 86%;
+    height: 160px;
+    margin-bottom: 2%;
+  }
+  #txt {
+    width: 94%;
+    margin-right: 0;
+  }
+  iframe {
+    width: 80%;
+  }
+  #browser {
+    width: 94%;
+  }
+  table {
+    display: none;
+  }
+  #showbutton {
+    display: block;
+  }
+  #prvasekcija {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  #prvasekcija input {
+    font-size: 18px;
+  }
+  .orangediv {
+    width: 100%;
+  }
+  .up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .up .upright a {
+    text-decoration: none;
+    margin: 17%;
+  }
+  .up .upright {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #transparentdiv {
+    background: black;
+    position: absolute;
+    left: auto;
+    display: flex;
+    top: auto;
+    color: white;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  #transparentdiv h1 {
+    text-align: center;
+  }
+  #trecasekcija input {
+    border-radius: 30px;
+    border: 1px solid grey;
+    color: grey;
+    margin: 2%;
+    font-size: 15px;
+    padding: 17px;
+    background: rgba(221, 221, 221, 0);
+  }
+  #drugim {
+    margin: 1% 15%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
