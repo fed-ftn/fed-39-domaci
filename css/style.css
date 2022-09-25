@@ -24,7 +24,7 @@ header img {
 }
 
 .orangediv {
-  background: orange;
+  background: #f75311;
   width: 15%;
   display: flex;
   flex-direction: row;
@@ -105,7 +105,7 @@ body {
 }
 #trecasekcija #tabele table th {
   border-right: 1px solid grey;
-  background: orange;
+  background: #f75311;
   color: white;
   padding: 0 72px;
 }
@@ -132,8 +132,66 @@ footer p {
   padding: 1%;
 }
 footer a {
-  color: orange;
+  color: #f75311;
   text-decoration: none;
+}
+
+#lastsec {
+  text-align: center;
+  padding: 2%;
+}
+
+#divl {
+  display: flex;
+}
+
+.full {
+  width: 90%;
+}
+
+.full2 {
+  margin-top: 2%;
+  width: 90%;
+}
+
+fieldset {
+  background: #f75311;
+  border: none;
+}
+
+input:active {
+  border: none;
+  outline: none;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+textarea, input {
+  outline: none;
+  border: none;
+  margin: 1% 2%;
+  padding: 1%;
+}
+
+form {
+  background: #f75311;
+  width: 50%;
+  height: 170px;
+}
+
+#divl {
+  margin: 0 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+iframe {
+  width: 35%;
+  height: 321px;
+  margin-bottom: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */
