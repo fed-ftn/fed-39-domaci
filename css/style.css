@@ -90,25 +90,6 @@ body {
   flex-direction: column;
   align-items: center;
 }
-#trecasekcija #tabele {
-  display: flex;
-  width: 337px;
-  flex-direction: column;
-  align-items: flex-end;
-}
-#trecasekcija #tabele table {
-  border: 1px solid grey;
-}
-#trecasekcija #tabele table td {
-  border-right: 1px solid grey;
-  padding: 0 72px;
-}
-#trecasekcija #tabele table th {
-  border-right: 1px solid grey;
-  background: #f75311;
-  color: white;
-  padding: 0 72px;
-}
 
 #drugim {
   margin: 1% 15%;
@@ -151,7 +132,7 @@ footer a {
 
 .full2 {
   margin-top: 2%;
-  width: 90%;
+  width: 96%;
 }
 
 fieldset {
@@ -166,6 +147,11 @@ input:active {
 
 textarea:focus, input:focus {
   outline: none;
+}
+
+#txt {
+  width: 56%;
+  margin-right: 0;
 }
 
 textarea, input {
@@ -192,6 +178,29 @@ iframe {
   width: 35%;
   height: 321px;
   margin-bottom: 2%;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+}
+table .siv {
+  background: #374249;
+  color: white;
+}
+table th {
+  background: #f75311;
+  color: white;
+}
+table th, table td {
+  width: 10%;
+  padding: 1% 2%;
+}
+table td {
+  border: 1px solid grey;
+}
+table .empty {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

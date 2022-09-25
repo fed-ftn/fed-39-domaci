@@ -101,26 +101,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    #tabele {
-        display: flex;
-        width: 337px;
-        flex-direction: column;align-items: flex-end;
-        table {
-            border: 1px solid $siva;
-
-            td {
-                border-right: 1px solid grey;
-                padding: 0 72px;
-            }
-
-            th {
-                border-right: 1px solid grey;
-                background:$narandzasta;
-                color: $bela;
-                padding: 0 72px;
-            }
-        }
-    }
+  
 }
 
 #drugim {
@@ -160,7 +141,7 @@ footer {
 
 #divl{display: flex;}
 .full{    width: 90%;}
-.full2{    margin-top:2%;width: 90%;}
+.full2{    margin-top:2%;width: 96%;}
 fieldset{background: $narandzasta;    border: none;}
 input:active {
     border: none;
@@ -169,7 +150,8 @@ input:active {
   textarea:focus, input:focus{
     outline: none;
 }
-
+#txt{    width: 56%;
+    margin-right: 0;}
 textarea, input{
     outline: none;
     border: none;
@@ -190,3 +172,13 @@ form{background:$narandzasta;
 iframe{width: 35%;
     height: 321px;
 margin-bottom: 2%;}
+
+table{
+    border-collapse: collapse;
+    .siv{background: $tamnosiva;color:$bela;}
+    text-align: center;
+    th{background: $narandzasta;color:$bela;}
+    th,td{width: 10%;padding: 1% 2%;}
+    td{border:1px solid $siva;}
+    .empty{border:none;}
+}
