@@ -90,6 +90,9 @@ body {
   flex-direction: column;
   align-items: center;
 }
+#trecasekcija p {
+  color: grey;
+}
 
 #drugim {
   margin: 1% 15%;
@@ -181,6 +184,7 @@ iframe {
 }
 
 table {
+  margin-top: 2%;
   border-collapse: collapse;
   text-align: center;
 }
@@ -199,8 +203,50 @@ table th, table td {
 table td {
   border: 1px solid grey;
 }
+table th {
+  border: 1px solid #f75311;
+}
 table .empty {
   border: none;
+}
+
+@media screen and (min-width: 481px) and (max-width: 720px) {
+  .orangediv {
+    width: 24%;
+  }
+  .up .upright {
+    width: 69%;
+  }
+  #prvasekcija input {
+    font-size: 10px;
+  }
+  #transparentdiv {
+    text-align: center;
+    top: 21%;
+  }
+  #drugim img {
+    width: 46%;
+  }
+  #divl {
+    margin: 0 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  iframe {
+    width: 51%;
+  }
+  #txt {
+    width: 51%;
+    margin-right: 0;
+  }
+  form {
+    background: #f75311;
+    width: 86%;
+    height: 140px;
+    margin-bottom: 2%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
